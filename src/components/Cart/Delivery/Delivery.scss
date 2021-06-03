@@ -1,0 +1,80 @@
+.cart-delivery {
+    padding: 18px 13px 0 18px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    position: relative;
+    z-index: 5;
+}
+
+.delivery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+.delivery__card-title {
+    margin: 0;
+    font-family: 'Noto Sans';
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.delivery__card-btn {
+    width: 15px;
+    height: 17px;
+    border: none;
+    background-color: transparent;
+    background-image: url('./deletebtn.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.delivery__card-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 19px;
+}
+
+.card-form__input {
+    padding-left: 11px;
+    width: 88px;
+    height: 48px;
+    border: 1px solid #EBEBEB;
+    border-radius: 8px;
+    transition: all .2s ease-in-out;
+}
+
+.card-form__input:focus {
+    border-color: #ffb000;
+    outline: none;
+}
+
+.input-sity {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.input-item {
+    position: relative;
+}
+
+.card-form__label {
+    position: absolute;
+    top: 16px;
+    left: 11px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #878786;
+}
+
+.card-form__input:focus + label {
+    top: 0;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 22px;
+    transition: all .2s ease-in-out;
+}

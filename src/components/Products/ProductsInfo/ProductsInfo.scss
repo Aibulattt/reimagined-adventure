@@ -1,0 +1,183 @@
+.products-info {
+    margin-top: 23px;
+    padding: 14px 0px 19px 15px;
+    background: #FFFFFF;
+    border-radius: 8px;
+}
+
+%title {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-family: 'Noto Sans' !important;
+    font-family: serif;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.nutrition__title {
+    @extend %title;
+}
+
+.nutrition__description {
+    margin: 0;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.nutrition__list {
+    margin-top: 15px;
+    margin-left: 15px;
+    list-style: initial;
+    font-size: 14px;
+}
+
+.nutrition__list-item {
+    margin-bottom: 5px;
+    color: #999999;
+}
+
+.nutrition__list-text {
+    margin: 0;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #999999;
+}
+
+.nutrition__list-consist {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 26px;
+    padding-top: 17px;
+    justify-content: space-around;
+    border-top: 1px solid #E7E5E5;
+}
+
+.list-consist__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list-consist__weight{
+    margin: 0;
+    font-family: 'Noto Sans' !important;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.list-consist__sub {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #999999;
+}
+
+.list-consist__proc {
+    margin-top: 4px;
+    padding: 0 4px;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 14px;
+    color: #707070;
+    background: #EBEBEB;
+
+    &:first-child {
+        display: inline-block;
+        min-height: 14px;
+    }
+}
+
+.list-consist__ft {
+    display: inline-block;
+    min-height: 14px;
+    padding: 0 6px;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 14px;
+    color: #0EB44D;
+    background: #E7F7ED;
+}
+
+.products__info-openBtn {
+    display: block;
+    margin: 0 auto;
+    margin-top: 17px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFB000;
+    border: none;
+    background-color: transparent;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 40%;
+        right: -10px;
+        width: 10px;
+        height: 6px;
+        background-image: url('./open.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+
+.ingridient {
+    margin-top: 18px;
+    padding-top: 17px;
+    border-top: 1px solid #E7E5E5;
+}
+
+.ingridient__title {
+    @extend %title;
+}
+
+.ingridient__description {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.other {
+    margin-top: 17px;
+    padding-top: 17px;
+    border-top: 1px solid #E7E5E5;
+}
+
+.other__title {
+    @extend %title;
+    margin-bottom: 18px;
+}
+
+.other__list {
+    padding-right: 15px;
+}
+
+.other__list-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 13px;
+}
+
+.list-item__key {
+    margin: 0;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #878786;
+}
+
+.list-item__value {
+    margin: 0;
+    width: 110px;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: right;
+}

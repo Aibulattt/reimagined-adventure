@@ -1,0 +1,78 @@
+.reccom__card {
+    display: flex;
+    flex-flow: column wrap;
+    width: 152px;
+    padding: 0 18px 20px 12px;
+    background: #FFFFFF;
+    border: 1px solid #F2F2F2;
+    border-radius: 8px;
+    position: relative;
+
+    .buttonAdd {
+        padding-right: 20px;
+        position: relative;
+        border: none;
+        background-color: transparent;
+        font-family: 'Noto Sans';
+        font-weight: bold;
+        font-size: 14px;
+        color: #FFBC41;
+        line-height: 20px;
+    
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -10px;
+            width: 24px;
+            height: 24px;
+            background-image: url('../../../../img/btnadd.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+}
+
+.reccom__card-control {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reccom__card-desc {
+    margin: 0;
+    margin-bottom: 4px;
+    font-family: 'Noto Sans',serif;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.reccom__card-priceofProd {
+    font-family: 'Noto Sans',serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #878786;
+}
+
+.reccom__card-price {
+    margin: 0;
+    font-family: 'Noto Sans',serif;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.reccom__save {
+    position: absolute;
+    top: 9px;
+    right: 9px;
+    width: 16px;
+    height: 14px;
+    background-image: url('./savebtn.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    background-color: transparent;
+}
+

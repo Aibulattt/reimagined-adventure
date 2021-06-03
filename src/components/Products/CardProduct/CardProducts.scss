@@ -1,0 +1,118 @@
+.card {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 12px 16px 16px 18px;
+    border-radius: 8px;
+    z-index: 2;
+    position: relative;
+    background-color: #fff;
+
+    .buttonAdd {
+        width: 38px;
+        height: 38px;
+        padding-right: 20px;
+        background-image: url('../../../img/btnadd.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        border: none;
+        background-color: transparent;
+    }
+}
+
+.card__list {
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 14px;
+}
+
+.card__list-item {
+    width: 24px;
+    height: 24px;
+    background-image: url('./icon1.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &:not(:last-child) {
+        margin-right: 6px;
+    }
+
+    &:nth-child(2) {
+        background-image: url(./icon2.svg);
+    }
+
+    &:nth-child(3) {
+        background-image: url(./icon3.svg);
+    }
+
+    &:nth-child(4) {
+        background: none;
+    }
+}
+
+.card__btn-save {
+    position: absolute;
+    top: 11px;
+    right: 16px;
+    width: 20px;
+    height: 19px;
+    background-image: url('./save.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    border: none;
+}
+
+.card__description-prod {
+    padding-right: 50px;
+    font-family: 'Noto Sans';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.card__priceofProd {
+    font-family: 'Noto Sans';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #999999;
+}
+
+.card__control {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #EBEBEB;
+}
+
+.card__control-price {
+    margin: 0;
+    font-family: 'Mukta';
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+}
+
+.card__control-btn {
+    display: flex;
+    align-items: center;
+}
+
+.card__count {
+    display: inline-block;
+    margin: 0 12px;
+}
+
+.card__list-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+.list-links__link {
+    font-family: 'Noto Sans';
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFB000;
+}

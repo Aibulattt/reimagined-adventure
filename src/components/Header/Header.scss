@@ -1,0 +1,44 @@
+.header {
+    margin: 0 auto;
+    padding: 9px 0 0 0;
+    width: 360px;
+    height: 123px;
+    border-radius: 0px 0px 8px 8px;
+    background-color: #FFB000;
+    position: absolute;
+    transition: all .2s ease-in-out;
+}
+
+.headerScroll {
+    margin: 0 auto;
+    padding: 9px 0 0 0;
+    width: 360px;
+    height: 40px;
+    border-radius: 0px 0px 8px 8px;
+    background-color: #FFB000;
+    position: fixed;
+    z-index: 20;
+    transition: all .2s ease-in-out;
+}
+
+.header__title {
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    color: #333;
+}
+
+.header__btn {
+    position: absolute;
+    top: 20px;
+    left: 17px;
+    width: 14px;
+    height: 10px;
+    background-image: url('./arrow.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    background-color: transparent;
+}

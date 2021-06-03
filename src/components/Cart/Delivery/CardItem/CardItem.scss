@@ -1,0 +1,35 @@
+.card-item {
+    display: flex;
+}
+
+.card-item__text {
+    width: 120px;
+}
+
+.card-item__description {
+    font-family: Noto Sans;
+    font-size: 12px;
+    line-height: 16px;
+    color: #000000;
+}
+
+.card-item__price {
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.card-item__priceofProd {
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #878786;
+}
+
+.card-item__img {
+    height: 49px;
+}
