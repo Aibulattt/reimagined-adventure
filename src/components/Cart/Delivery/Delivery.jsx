@@ -78,7 +78,7 @@ export const Delivery = () => {
                 <ul className='payment__list'>
                     <li className='payment__list-item'>
                         <p className='payment-list-item__key'>Order:</p>
-                        <p className='payment-list-item__value'>{Math.round(total)}</p>
+                        <p className='payment-list-item__value'>{Math.round(total) || ''}</p>
                     </li>
                     <li className='payment__list-item'>
                         <p className='payment-list-item__key'>Delivery</p>
@@ -90,7 +90,7 @@ export const Delivery = () => {
                     </li>
                     <li className='payment__list-item'>
                         <p className='payment-list-item__key'>Total</p>
-                        <p className='payment-list-item__value'>{Math.round(total + 0,4)}</p>
+                        <p className='payment-list-item__value'>{Math.round(total + 0,4) || ''}</p>
                     </li>
                 </ul>
             </article>
