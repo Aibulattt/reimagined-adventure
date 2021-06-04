@@ -46,6 +46,7 @@
     color: #999999;
 }
 
+.nutrition__list-hide,
 .nutrition__list-consist {
     display: flex;
     flex-wrap: wrap;
@@ -54,6 +55,15 @@
     padding-top: 17px;
     justify-content: space-around;
     border-top: 1px solid #E7E5E5;
+    transition: all .2s ease-in-out;
+}
+
+.nutrition__list-hide {
+    margin-top: 0;
+    padding-top: 0;
+    height: 0;
+    opacity: 0;
+    transition: all .2s ease-in-out;
 }
 
 .list-consist__item {
@@ -103,6 +113,7 @@
     background: #E7F7ED;
 }
 
+.products__info-closeBtn,
 .products__info-openBtn {
     display: block;
     margin: 0 auto;
@@ -125,6 +136,12 @@
         background-image: url('./open.svg');
         background-repeat: no-repeat;
         background-size: contain;
+    }
+}
+
+.products__info-closeBtn {
+    &::after {
+        transform: rotate(180deg);
     }
 }
 
@@ -181,3 +198,4 @@
     line-height: 16px;
     text-align: right;
 }
+

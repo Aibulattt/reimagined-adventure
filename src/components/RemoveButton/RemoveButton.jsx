@@ -1,14 +1,15 @@
 import React from 'react'
 import './RemoveButton.scss'
 
-export const RemoveButton = () => {
-    const handleClick = () => {
-        console.log('remove Click')
-    }
+export const RemoveButton = ({w,h, handleClickDecrement, id}) => {
     return (
         <button 
+            style={{
+                'width': w,
+                'height': h
+            }}
             className='removeBtn'
-            onClick={handleClick}
+            onClick={() => handleClickDecrement(id)}
         ></button>
     )
 }

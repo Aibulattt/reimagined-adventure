@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react'
-import { useDispatch } from 'react-redux'
-import { setScrollOff, setScrollOn } from '../../store/action'
+import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { useScroll } from '../../Hooks/useScroll'
+import { decrementProd, hideListNutrition, incrementProd, setSavedProd } from '../../store/action'
 import { Header } from '../Header/Header'
 import { CardProducts } from './CardProduct/CardProduct'
 import './Products.scss'
@@ -8,20 +9,26 @@ import { ProductsInfo } from './ProductsInfo/ProductsInfo'
 import { Reccomend } from './Reccomend/Reccomend'
 
 export const Products = () => {
+    useScroll()
     const dispatch = useDispatch()
+    const listNutrition = useSelector(state => state.listNutrition)
+    const cards = useSelector(state => state.cardsProducts)
+    const handleClick = () => {
+        if (listNutrition) dispatch(hideListNutrition(false))       
+        else  dispatch(hideListNutrition(true))
+    }
+    const setIncrementProd = () => {
+        dispatch(incrementProd())
+    }
 
-    const handleScroll = () => {
-        if (window.scrollY > 70) dispatch(setScrollOn(true))
-        else dispatch(setScrollOff(false)) 
-      }
+    const setDecrementProd= () => {
+        dispatch(decrementProd())
+    }
 
-      useEffect(() => {
-        window.addEventListener('scroll', handleScroll)
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll)
-        }
-      }, [])
+    const setSaveProd = (saved) => {
+        if(!saved) dispatch(setSavedProd(true))
+        else dispatch(setSavedProd(false))   
+    }
     return (
         <section 
             className='products'
@@ -31,9 +38,24 @@ export const Products = () => {
                 path='/cart'
             />
             <div className="container products-container">
-                <CardProducts />
+                {cards.map(card => {
+                    return (
+                        <CardProducts 
+                            key={card.id}
+                            setSaveProd={setSaveProd}
+                            setDecrementProd={setDecrementProd}
+                            setIncrementProd={setIncrementProd}
+                            count={card.count}
+                            saved={card.saved}
+                        />
+                    )
+                })}
+               
                 <Reccomend />
-                <ProductsInfo />
+                <ProductsInfo 
+                    listNutrition={listNutrition}
+                    handleClick={handleClick}
+                />
             </div>
         </section>
     )

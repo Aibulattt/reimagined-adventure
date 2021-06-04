@@ -7,15 +7,35 @@
     position: relative;
     background-color: #fff;
 
+    .paddingnone {
+        padding: 0;
+    }
+
+    .paddingnone,
     .buttonAdd {
-        width: 38px;
-        height: 38px;
-        padding-right: 20px;
-        background-image: url('../../../img/btnadd.svg');
-        background-repeat: no-repeat;
-        background-size: contain;
+        min-height: 38px;
+        padding-right: 35px;
         border: none;
         background-color: transparent;
+        font-family: 'Noto Sans';
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 36px;
+        color: #FFB000;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -10px;
+            width: 38px;
+            height: 38px;
+            padding-right: 20px;
+            background-image: url('../../../img/btnadd.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
     }
 }
 
@@ -49,6 +69,7 @@
     }
 }
 
+.card__btn-Nosave,
 .card__btn-save {
     position: absolute;
     top: 11px;
@@ -60,6 +81,10 @@
     background-size: contain;
     background-color: transparent;
     border: none;
+}
+
+.card__btn-Nosave {
+    background-image: url(./saved.svg);
 }
 
 .card__description-prod {
@@ -96,11 +121,14 @@
 .card__control-btn {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+    min-width: 70px;
 }
 
 .card__count {
     display: inline-block;
-    margin: 0 12px;
+    margin-right: 5px;
+    margin-left: 10px;
 }
 
 .card__list-links {

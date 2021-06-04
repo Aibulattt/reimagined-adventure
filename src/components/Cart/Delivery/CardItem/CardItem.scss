@@ -1,5 +1,20 @@
 .card-item {
     display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 12px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #F4F3F3;
+
+    .btnAdd {
+        width: 28px;
+        height: 28px;
+        background-image: url('./btnadd.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        border: none;
+        background-color: transparent;
+    }
 }
 
 .card-item__text {
@@ -7,14 +22,16 @@
 }
 
 .card-item__description {
-    font-family: Noto Sans;
+    margin: 0;
+    font-family: 'Noto Sans';
     font-size: 12px;
     line-height: 16px;
     color: #000000;
 }
 
 .card-item__price {
-    font-family: Noto Sans;
+    margin-right: 10px;
+    font-family: 'Noto Sans';
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
@@ -22,7 +39,7 @@
 }
 
 .card-item__priceofProd {
-    font-family: Noto Sans;
+    font-family: 'Noto Sans';
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
@@ -32,4 +49,19 @@
 
 .card-item__img {
     height: 49px;
+}
+
+.card-item__control {
+    display: flex;
+    align-items: flex-end;
+    margin-left: auto;
+}
+
+.card-item__count {
+    margin: 0 10px;
+    padding-bottom: 5px;
+    font-family: 'Noto Sans';
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
 }

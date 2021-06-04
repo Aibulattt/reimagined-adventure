@@ -2,10 +2,15 @@ import React from 'react'
 import { RemoveButton } from '../../RemoveButton/RemoveButton'
 import './CardProducts.scss'
 
-export const CardProducts = () => {
+export const CardProducts = ({count, saved, setIncrementProd, setDecrementProd, setSaveProd}) => {
+    const classBtnIncrement = count ? 'paddingnone' : 'buttonAdd'
+    const classBtnSave = saved ? 'card__btn-Nosave' : 'card__btn-save'
     return (
         <div className='card'>
-            <button className='card__btn-save'></button>
+            <button 
+                onClick={() => setSaveProd(saved)}
+                className={classBtnSave}>
+            </button>
             <ul className='card__list'>
                 <li className='card__list-item'></li>
                 <li className='card__list-item'></li>
@@ -18,13 +23,20 @@ export const CardProducts = () => {
             <div className='card__control'>
                 <p className='card__control-price'>£1.59</p>
                 <div className='card__control-btn'>
-                    <RemoveButton />
-                    <span className='card__count'>2</span>
+                    {count ? (
+                        <>
+                            <RemoveButton handleClickDecrement={setDecrementProd} w={38} h={38}/>
+                            <span className='card__count'>{count}</span>
+                        </>
+                        ) : ''
+                    }
+                    
                     <button 
-                        className='buttonAdd'
+                        onClick={setIncrementProd}
+                        className={classBtnIncrement}
                     >
-
-                </button>
+                        {!count && 'Add'}
+                    </button>
                 </div>
             </div>
             <ul className='card__list-links'>

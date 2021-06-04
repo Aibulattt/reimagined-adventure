@@ -1,7 +1,5 @@
 .cart-delivery {
-    padding: 18px 13px 0 18px;
-    background: #FFFFFF;
-    border-radius: 8px;
+    margin-bottom: 80px;
     position: relative;
     z-index: 5;
 }
@@ -10,7 +8,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    
+    padding: 18px 13px 0 18px;
+    background: #FFFFFF;
+    border-radius: 8px;
 }
 
 .delivery__card-title {
@@ -77,4 +77,74 @@
     font-size: 12px;
     line-height: 22px;
     transition: all .2s ease-in-out;
+}
+
+.cart-items__title {
+    font-family: 'Noto Sans';
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.payment__list {
+    margin-top: 20px;
+    padding: 9px 11px 12px 18px;
+    background: #FFFFFF;
+    border: 1px solid #F2F2F2;
+    border-radius: 8px;
+}
+
+.payment__list-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.payment-list-item__value,
+.payment-list-item__key {
+    margin: 0;
+    font-family: 'Noto Sans';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.color-red {
+    color: red;
+}
+
+.payment__list-item {
+    &:not(:last-child) {
+        margin-bottom: 12px;
+    }
+    &:nth-child(4) {
+        padding-top: 12px;
+        border-top: 1px solid #F2F2F2;
+
+        .payment-list-item__value,
+        .payment-list-item__key {
+            font-family: 'Mukta';
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 32px;
+        }
+    }
+}
+
+.payment__title {
+    font-family: 'Noto Sans';
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.payment__promo {
+    padding-left: 17px;
+    background: #FFFFFF;
+    border: 1px solid #F2F2F2;
+    border-radius: 8px;
+}
+
+.payment__promo {
+    height: 48px;
+    width: 100%;
 }

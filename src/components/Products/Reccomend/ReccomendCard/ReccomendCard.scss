@@ -8,6 +8,7 @@
     border-radius: 8px;
     position: relative;
 
+    .paddingnone,
     .buttonAdd {
         padding-right: 20px;
         position: relative;
@@ -31,11 +32,31 @@
             background-size: contain;
         }
     }
+
+    .paddingnone {
+        padding-right: 0;
+    }
+}
+
+.countprod {
+    align-self: center;
+    margin-right: 10px;
+    margin-left: 3px;
+    font-family: 'Noto Sans';
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
 }
 
 .reccom__card-control {
     display: flex;
     justify-content: space-between;
+}
+
+.reccom__card-countblock {
+    display: flex;
+    justify-content: flex-end;
+    min-width: 70px;
 }
 
 .reccom__card-desc {
@@ -63,6 +84,7 @@
     line-height: 20px;
 }
 
+.reccom__Nosave,
 .reccom__save {
     position: absolute;
     top: 9px;
@@ -74,5 +96,9 @@
     background-size: contain;
     border: none;
     background-color: transparent;
+}
+
+.reccom__Nosave {
+    background-image: url('./saved.svg');
 }
 

@@ -1,13 +1,15 @@
 import React from 'react'
 import './ProductsInfo.scss'
 
-export const ProductsInfo = () => {
+export const ProductsInfo = ({ handleClick, listNutrition }) => {
+    const classBtnList = listNutrition ? 'products__info-openBtn' : 'products__info-closeBtn'
+    const classList = listNutrition ? 'nutrition__list-consist' : 'nutrition__list-hide'
     return (
         <section className='products-info'>
             <article className='nutrition' id='nutrition'>
                 <h3 className='nutrition__title'>Nutrition</h3>
                 <p className='nutrition__description'>
-                    Lorem ipsum dolor sit amet, <b>consectetur adipiscing</b> elit. Ultrices at egestas tempus duis egestas semper dolor <b>morbi purus</b>. Lorem ipsum dolor sit amet, <b>consectetur adipiscing</b> elit. Ultrices at egestas tempus duis egestas semper dolor <b>morbi purus.</b> 
+                    Lorem ipsum dolor sit amet, <b>consectetur adipiscing</b> elit. Ultrices at egestas tempus duis egestas semper dolor <b>morbi purus</b>. Lorem ipsum dolor sit amet, <b>consectetur adipiscing</b> elit. Ultrices at egestas tempus duis egestas semper dolor <b>morbi purus.</b>
                 </p>
                 <ul className='nutrition__list'>
                     <li className='nutrition__list-item'>
@@ -24,7 +26,7 @@ export const ProductsInfo = () => {
                     </li>
                 </ul>
 
-                <ul className='nutrition__list-consist'>
+                <ul className={classList}>
                     <li className='list-consist__item'>
                         <p className='list-consist__weight'>28</p>
                         <span className='list-consist__sub'>Kkal.</span>
@@ -69,13 +71,19 @@ export const ProductsInfo = () => {
                         <span className='list-consist__proc'>10% RI</span>
                     </li>
                 </ul>
-                <button className='products__info-openBtn'>Hide</button>
+
+                <button
+                    onClick={handleClick}
+                    className={classBtnList}
+                >
+                    {listNutrition ? 'Hide' : 'More'}
+                </button>
             </article>
 
             <article className='ingridient' id='ingridient'>
                 <h3 className='ingridient__title'>Ingridients</h3>
                 <p className='ingridient__description'>
-                    Lorem ipsum dolor sit amet, <b>consectetur adipiscing</b> elit. Ultrices at egestas tempus duis egestas semper dolor <b>morbi purus.</b> 
+                    Lorem ipsum dolor sit amet, <b>consectetur adipiscing</b> elit. Ultrices at egestas tempus duis egestas semper dolor <b>morbi purus.</b>
                 </p>
             </article>
 
