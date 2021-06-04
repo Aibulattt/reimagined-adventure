@@ -37,17 +37,21 @@ export const Delivery = () => {
                 <h2 className='delivery__card-title'>Delivery address</h2>
                 <button className='delivery__card-btn'></button>
                 <form className='delivery__card-form'>
-                    <input className='card-form__input input-sity' onChange={(ev) => onCity(ev.target.value)} value={deliveryAddress.city} type="text" />
+                    <input
+                        className='card-form__input input-sity' onChange={(ev) => onCity(ev.target.value)} value={deliveryAddress.city} type="text" />
                     <div className='input-item'>
-                        <input className='card-form__input' value={deliveryAddress.flat} onChange={(ev) => onFlat(ev.target.value)} id='flat' name='flat' type="number" />
+                        <input
+                            className='card-form__input' value={deliveryAddress.flat} onChange={(ev) => onFlat(ev.target.value)} id='flat' name='flat' type="number" />
                         <label className='card-form__label' htmlFor="flat">Flat</label>
                     </div>
                     <div className='input-item'>
-                        <input className='card-form__input' value={deliveryAddress.floor} onChange={(ev) => onFloor(ev.target.value)} id='Floor' name='Floor' type="number" />
+                        <input
+                            className='card-form__input' value={deliveryAddress.floor} onChange={(ev) => onFloor(ev.target.value)} id='Floor' name='Floor' type="number" />
                         <label className='card-form__label' htmlFor="Floor">Floor</label>
                     </div>
                     <div className='input-item'>
-                        <input className='card-form__input' name='Block' value={deliveryAddress.block} onChange={(ev) => onBlock(ev.target.value)} id='Block' type="text" />
+                        <input
+                            className='card-form__input' name='Block' value={deliveryAddress.block} onChange={(ev) => onBlock(ev.target.value)} id='Block' type="text" />
                         <label className='card-form__label' htmlFor="Block">Block</label>
                     </div>
                 </form>
