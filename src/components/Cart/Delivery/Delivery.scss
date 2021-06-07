@@ -1,5 +1,5 @@
 .cart-delivery {
-    margin-bottom: 80px;
+    margin-bottom: 120px;
     position: relative;
     z-index: 5;
 }
@@ -39,6 +39,7 @@
 }
 
 .card-form__input {
+    padding-top: 18px;
     padding-left: 11px;
     width: 88px;
     height: 48px;
@@ -77,6 +78,14 @@
     font-size: 12px;
     line-height: 22px;
     transition: all .2s ease-in-out;
+}
+
+.input-nonempty + label{
+    top: 0;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 22px;
+    transition: all .2s ease-in-out; 
 }
 
 .cart-items__title {
@@ -148,3 +157,4 @@
     height: 48px;
     width: 100%;
 }
+

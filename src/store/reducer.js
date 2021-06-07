@@ -14,12 +14,10 @@ import {
     SET_FLOOR,
     SET_BLOCK
 } from './action'
-import {
-    nanoid
-} from 'nanoid'
+import {nanoid} from 'nanoid'
 
 const initialState = {
-    skroll: false,
+    scroll: false,
     cardsReccomend: [{
             id: nanoid(),
             saved: false,
@@ -166,26 +164,26 @@ export const rootReducer = (state = initialState, action) => {
             case SET_CITY:
                 return {
                     ...state,
-                    deliveryAddress: state.deliveryAddress.city = action.city
+                    deliveryAddress: {...state.deliveryAddress, city: action.city}
                 }    
 
             case SET_FLAT:
             return {
                 ...state,
-                deliveryAddress: state.deliveryAddress.flat = action.flat
+                deliveryAddress: {...state.deliveryAddress, flat: action.flat}
             } 
 
             case SET_FLOOR:
                 return {
                     ...state,
-                    deliveryAddress: state.deliveryAddress.floor = action.floor
+                    deliveryAddress: {...state.deliveryAddress, floor: action.floor}
                 } 
 
-                case SET_BLOCK:
-                    return {
-                        ...state,
-                        deliveryAddress: state.deliveryAddress.block = action.block
-                    }     
+            case SET_BLOCK:
+                return {
+                    ...state,
+                    deliveryAddress: {...state.deliveryAddress, block: action.block}
+                }     
 
             default:
                 return state

@@ -41,30 +41,37 @@
 
 .card__list {
     display: flex;
-    margin: 0 auto;
+    justify-content: center;
     margin-bottom: 14px;
 }
 
 .card__list-item {
+    align-self: center;
     width: 24px;
     height: 24px;
     background-image: url('./icon1.svg');
     background-repeat: no-repeat;
     background-size: contain;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 14px;
+    color: #CCCCCC;
 
     &:not(:last-child) {
         margin-right: 6px;
     }
 
     &:nth-child(2) {
-        background-image: url(./icon2.svg);
+        background-image: url('./icon2.svg');
     }
 
     &:nth-child(3) {
-        background-image: url(./icon3.svg);
+        background-image: url('./icon3.svg');
     }
 
     &:nth-child(4) {
+        display: flex;
+        align-items: center;
         background: none;
     }
 }
@@ -84,7 +91,7 @@
 }
 
 .card__btn-Nosave {
-    background-image: url(./saved.svg);
+    background-image: url('./saved.svg');
 }
 
 .card__description-prod {

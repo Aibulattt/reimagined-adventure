@@ -15,7 +15,7 @@ export const CardProducts = ({count, saved, setIncrementProd, setDecrementProd, 
                 <li className='card__list-item'></li>
                 <li className='card__list-item'></li>
                 <li className='card__list-item'></li>
-                <li className='card__list-item'>+3</li>
+                <li className='card__list-item'><p>+3</p></li>
             </ul>
             <img src="../../../../img/img.png" alt="milk image"/>
             <p className='card__description-prod'>Just Milk Semi-Skimmed 6 x 1L (Case of 2)</p>

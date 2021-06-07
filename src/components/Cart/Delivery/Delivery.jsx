@@ -8,6 +8,9 @@ export const Delivery = () => {
     const dispatch = useDispatch()
     const cartItems = useSelector(state => state.cartItems)
     const deliveryAddress = useSelector(state => state.deliveryAddress)
+    const classInputFlat = deliveryAddress.flat ? 'input-nonempty' : ''
+    const classInputFloor = deliveryAddress.floor ? 'input-nonempty' : ''
+    const classInputBlock = deliveryAddress.block ? 'input-nonempty' : ''
     const handleClickIncrement = (id) => {
         dispatch(setIncrementCart(id))
     }
@@ -15,8 +18,8 @@ export const Delivery = () => {
         dispatch(setDecrementCart(id))
     }
 
-    const onCity = (city) => {
-        dispatch(setCity(city))
+    const onCity = (ev) => {
+        dispatch(setCity(ev.target.value))
     }
 
     const onFlat = (flat) => {
@@ -30,7 +33,7 @@ export const Delivery = () => {
     const onBlock = (block) => {
         dispatch(setBlock(block))
     }
-    let total
+    let total 
     return (
         <section className='cart-delivery'>
             <article className='delivery'>
@@ -38,27 +41,50 @@ export const Delivery = () => {
                 <button className='delivery__card-btn'></button>
                 <form className='delivery__card-form'>
                     <input
-                        className='card-form__input input-sity' onChange={(ev) => onCity(ev.target.value)} value={deliveryAddress.city} type="text" />
+                        className={`card-form__input input-sity`}
+                        onChange={onCity} 
+                        value={deliveryAddress.city} 
+                        type="text" 
+                    />
                     <div className='input-item'>
                         <input
-                            className='card-form__input' value={deliveryAddress.flat} onChange={(ev) => onFlat(ev.target.value)} id='flat' name='flat' type="number" />
+                            className={`card-form__input ${classInputFlat}`}
+                            value={deliveryAddress.flat} 
+                            onChange={(ev) => onFlat(ev.target.value)} 
+                            id='flat' 
+                            name='flat' 
+                            type="number"
+                        />
                         <label className='card-form__label' htmlFor="flat">Flat</label>
                     </div>
                     <div className='input-item'>
                         <input
-                            className='card-form__input' value={deliveryAddress.floor} onChange={(ev) => onFloor(ev.target.value)} id='Floor' name='Floor' type="number" />
+                            className={`card-form__input ${classInputFloor}`}
+                            value={deliveryAddress.floor} 
+                            onChange={(ev) => onFloor(ev.target.value)} 
+                            id='Floor' 
+                            name='Floor' 
+                            type="number" 
+                        />
                         <label className='card-form__label' htmlFor="Floor">Floor</label>
                     </div>
                     <div className='input-item'>
                         <input
-                            className='card-form__input' name='Block' value={deliveryAddress.block} onChange={(ev) => onBlock(ev.target.value)} id='Block' type="text" />
+                            className={`card-form__input ${classInputBlock}`}
+                            name='Block' 
+                            value={deliveryAddress.block} 
+                            onChange={(ev) => onBlock(ev.target.value)} 
+                            id='Block' 
+                            type="text" 
+                        />
                         <label className='card-form__label' htmlFor="Block">Block</label>
                     </div>
                 </form>
                 <h2 className='cart-items__title'>{cartItems.length} items</h2>
                 <ul>
                     {cartItems.map(item => {
-                        total = cartItems.reduce((total, item) => total + item.price, 0)
+                        total = cartItems.reduce((total, item) => total + item.price, 0) + 0.4  
+                        total = total.toFixed(2) 
                         return (
                             <li key={item.id}>
                                 <CardItem 
@@ -90,7 +116,7 @@ export const Delivery = () => {
                     </li>
                     <li className='payment__list-item'>
                         <p className='payment-list-item__key'>Total</p>
-                        <p className='payment-list-item__value'>{Math.round(total + 0,4) || ''}</p>
+                        <p className='payment-list-item__value'>{total ? `£ ${total}` : ''}</p>
                     </li>
                 </ul>
             </article>
